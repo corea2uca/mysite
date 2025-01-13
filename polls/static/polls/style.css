@@ -1,0 +1,10 @@
+li a {
+    color: green;
+}
+
+body {
+    /* png 안됨
+       background: white url("images/background.png") no-repeat; 
+    */
+    background: white url("images/background.jpeg") no-repeat;
+}
