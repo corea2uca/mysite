@@ -10,4 +10,4 @@ def square_even_numbers(numbers):
 numbers = [1, 2, 3, 4]  # 리스트로 수정
 print(square_even_numbers(numbers))
 
-print('a')
+print('a01')
