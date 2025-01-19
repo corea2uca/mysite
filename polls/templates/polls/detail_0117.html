@@ -1,26 +1,27 @@
-<h1> 12.detail.html</h1><br>
+<h1>urls - views(models) - detail.html</h1>
+<!-- 1 -->
+<!-- <h1>{{ question.question_text }}</h1>
 
-<h1>{{ question.question_text }}</h1>
-<!-- 
 <ul>
 {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }}</li>
 {% endfor %}
 </ul> -->
 
+<!-- 2 -->
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<h1>{{ question.question_text }}</h1>
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
-<!-- 사이트간, 위조방지, input hidden, value --> 
-{% csrf_token %} 
+{% csrf_token %} <!-- 위조방지 -->
     {% for choice in question.choice_set.all %}
         <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
         <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
     {% endfor %}
-<br><input type="submit" value="Vote"> <!-- 버튼명=Vote --> 
+<input type="submit" value="Vote">
 </form>
 
 <!-- 
 forloop.counter
-장고 내장변수: 1부터 시작하는 현재 반복 횟수 (1, 2, 3, ...) 
+1부터 시작하는 현재 반복 횟수 (1, 2, 3, ...) 
 -->

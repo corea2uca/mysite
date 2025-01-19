@@ -3,8 +3,6 @@ li a {
 }
 
 body {
-    /* png 안됨
-       background: white url("images/background.png") no-repeat; 
-    */
-    background: white url("images/background.jpeg") no-repeat;
+    /* png안됨 -> jpeg */
+    background: white url("images/background.jpg") no-repeat;
 }

@@ -2,13 +2,12 @@
 
 <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 
-<h1> 11.index.html</h1><br>
-
+<h1>urls - views(models) - index.html01</h1>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>        
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }} , url</a></li>
     {% endfor %}
     </ul>
 {% else %}
